@@ -1,0 +1,11 @@
+test
+files
+config
+locales
+.jscsrc
+.jshintignore
+.jshintrc
+.travis.yml
+.gitignore
+*.log
+*.sqlite

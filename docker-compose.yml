@@ -1,0 +1,23 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    ports:
+      - "26479:6379"
+  rabbit1:
+    image: "rabbitmq:3.8-management-alpine"
+    hostname: "rabbit1"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "ASAKCANCJ<AKSOSOPOA"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "26478:15672"
+      - "26477:5672"
+    labels:
+      NAME: "rabbitmq1"
+    #volumes:
+      #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      #- "./rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro"
+      #- "./autocluster-0.4.1.ez:/usr/lib/rabbitmq/lib/rabbitmq_server-3.5.5/plugins/autocluster-0.4.1.ez"
