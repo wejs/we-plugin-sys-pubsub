@@ -13,7 +13,7 @@ function makeFilePubSub(cb) {
   testTools.init({}, we);
 
   we.bootstrap({
-    port: 11111,
+    port: 11113,
     // disable access log
     enableRequestLog: false,
     sysPubsub: {
@@ -48,10 +48,14 @@ describe('PUBSUB:FILE', function() {
     }, callback);
   });
 
-// start the server:
-before(function (callback) {
-  we.startServer(callback);
-});
+  after(function (callback) {
+    we.exit(callback);
+  });
+
+  // start the server:
+  before(function (callback) {
+    we.startServer(callback);
+  });
 
   before(function (done) {
     http = helpers.getHttp();

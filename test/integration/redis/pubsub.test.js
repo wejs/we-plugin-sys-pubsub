@@ -40,7 +40,7 @@ describe('PUBSUB:REDIS', function() {
     testTools.init({}, we);
 
     we.bootstrap({
-      port: 11111,
+      port: 11114,
       // disable access log
       enableRequestLog: false,
       sysPubsub: {
@@ -52,10 +52,14 @@ describe('PUBSUB:REDIS', function() {
     }, callback);
   });
 
-// start the server:
-before(function (callback) {
-  we.startServer(callback);
-});
+  after(function (callback) {
+    we.exit(callback);
+  });
+
+  // start the server:
+  before(function (callback) {
+    we.startServer(callback);
+  });
 
   before(function (done) {
     http = helpers.getHttp();
