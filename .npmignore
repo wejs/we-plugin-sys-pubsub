@@ -9,3 +9,5 @@ locales
 .gitignore
 *.log
 *.sqlite
+docker-compose.yml
+README.md

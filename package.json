@@ -7,8 +7,8 @@
     "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js -b ",
     "coverage": "NODE_ENV=test LOG_LV=info nyc mocha test/bootstrap.js test/**/*.test.js -b"
   },
+  "dependencies": {},
   "devDependencies": {
-    "amqplib": "^0.5.5",
     "chance": "^1.1.4",
     "connect-sqlite3": "^0.9.11",
     "fs-extra": "^8.1.0",
