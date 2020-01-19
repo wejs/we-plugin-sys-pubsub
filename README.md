@@ -27,5 +27,5 @@ we.sysPubsub.publish('cached-main-menu-changes', {
 
 ## Copyright and license
 
-Copyright 2013-2015 [your name] <[your email@email]> and contributors , under [the MIT license](LICENSE).
+Copyright 2020+ Alberto Souza <contato@albertosouza.net> and contributors , under [the MIT license](https://github.com/wejs/we-core/blob/master/LICENSE.md).
 
