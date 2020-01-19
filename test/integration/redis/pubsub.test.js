@@ -1,6 +1,5 @@
 const assert = require('assert'),
   helpers = require('we-test-tools').helpers,
-  path = require('path'),
   testTools = require('we-test-tools'),
   We = require('we-core');
 
