@@ -33,6 +33,8 @@ module.exports = function loadPlugin(projectPath, Plugin) {
   plugin.initPubSub = function(we, done) {
     if (!we.sysPubsub) return done();
     we.sysPubsub.init(done);
+
+    we.events.emit('we:after:init:sysPubsub', we);
   };
 
   plugin.hooks.on('we:after:load:plugins', plugin.selectPubSubService);
