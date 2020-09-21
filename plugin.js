@@ -20,7 +20,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
   // });
 
   plugin.selectPubSubService = function(we, done) {
-    const st = we.config.pubSubServiceName;
+    const st = we.config.sysPubsub.serviceName;
 
     if (!st) return done();
     const Pubsub = require('./lib/pubsub/'+st);
